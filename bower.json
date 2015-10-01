@@ -1,0 +1,25 @@
+{
+  "name": "CaitlynDoesDisney",
+  "version": "0.0.0",
+  "homepage": "https://github.com/WesTyler/CaitlynDoesDisney",
+  "authors": [
+    "WesTyler <westyler5@gmail.com>"
+  ],
+  "description": "SPA for Disney Travel Planner",
+  "moduleType": [
+    "es6",
+    "globals",
+    "node"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.4.7"
+  }
+}

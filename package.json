@@ -1,0 +1,28 @@
+{
+  "name": "caitlyndoesdisney",
+  "version": "1.0.0",
+  "description": "SPA for Disney Travel Planner",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WesTyler/CaitlynDoesDisney.git"
+  },
+  "keywords": [
+    "Disney"
+  ],
+  "author": "WesTyler",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/WesTyler/CaitlynDoesDisney/issues"
+  },
+  "homepage": "https://github.com/WesTyler/CaitlynDoesDisney#readme",
+  "dependencies": {
+    "bower": "^1.5.3",
+    "express": "^4.13.3",
+    "grunt": "^0.4.5",
+    "grunt-bower-concat": "^0.5.0"
+  }
+}
