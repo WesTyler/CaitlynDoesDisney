@@ -3,6 +3,7 @@ logs
 *.log
 
 # Mac Files
+userstories.txt
 
 
 # Grunt intermediate storage (http://gruntjs.com/creating-plugins#storing-task-files)
