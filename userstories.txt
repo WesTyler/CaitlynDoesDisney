@@ -1,0 +1,18 @@
+Potential Clients/Public
+    * Services
+    * Blog (?)
+    * Contact
+    * Quote Form
+
+Current Clients
+    * Messaging (?)
+    * Info Forms / Dining Preferences / Favorite Characters
+
+Caitlyn
+    * Client Data
+        - Info Forms / etc
+        - Dates of Travel
+        - Dates / Amounts of Payments
+        - Contact Info
+    * Blog Admin
+        - WYSIWYG blog text editor
