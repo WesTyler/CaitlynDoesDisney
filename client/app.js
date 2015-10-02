@@ -10,6 +10,10 @@ angular.module('app', ['ui.router'])
         abstract: true,
         templateUrl: './app/nav/nav.html',
         controller: 'NavController'
+      },
+      '': { // Landing Page Content
+        abstract: true,
+        templateUrl: './app/content/content.html'
       }
     }
   })
