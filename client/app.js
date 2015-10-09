@@ -2,8 +2,8 @@ var app = angular.module('app', ['ui.router'])
 
 .config(function($stateProvider, $urlRouterProvider){
   $stateProvider
-  .state('', {
+  .state('/', {
     url: '/',
-    templateUrl: './app/nav/nav.html'
+    templateUrl: __dirname + '/app/nav/nav.html'
   })
 })
