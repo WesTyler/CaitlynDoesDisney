@@ -1,9 +1,15 @@
-var app = angular.module('app', ['ui.router'])
+angular.module('app', ['ui.router'])
 
 .config(function($stateProvider, $urlRouterProvider){
   $stateProvider
-  .state('/', {
+  .state('app', {
     url: '/',
-    templateUrl: __dirname + '/app/nav/nav.html'
+    templateUrl: './index.html',
+    views: {
+      'app.landing' : {
+        abstract: true,
+        templateUrl: './app/content/content.html'
+      }
+    }
   })
 })
