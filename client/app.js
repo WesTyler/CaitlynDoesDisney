@@ -8,14 +8,12 @@ myApp.config(function($stateProvider, $urlRouterProvider) {
   $stateProvider
     .state('home', {
       url: "/home",
-      templateUrl: "home/home.html"
+      templateUrl: "home/home.html",
+      controller: 'HomeController'
     })
     .state('home.list', {
       url: "/list",
       templateUrl: "home/home.list.html",
-      controller: function($scope) {
-        $scope.items = ["A", "List", "Of", "Items"];
-      }
     })
     .state('about', {
       url: "/about",
