@@ -17,13 +17,13 @@ myApp.config(function($stateProvider, $urlRouterProvider) {
         $scope.items = ["A", "List", "Of", "Items"];
       }
     })
-    .state('state2', {
-      url: "/state2",
-      templateUrl: "partials/state2.html"
+    .state('about', {
+      url: "/about",
+      templateUrl: "about/about.html"
     })
-    .state('state2.list', {
+    .state('about.list', {
       url: "/list",
-      templateUrl: "partials/state2.list.html",
+      templateUrl: "about/about.list.html",
       controller: function($scope) {
         $scope.things = ["A", "Second", "Set", "Of", "Things"];
       }
