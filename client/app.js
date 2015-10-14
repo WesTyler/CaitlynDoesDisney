@@ -1,18 +1,18 @@
 var myApp = angular.module('myApp', ['ui.router'])
 myApp.config(function($stateProvider, $urlRouterProvider) {
   //
-  // For any unmatched url, redirect to /state1
-  $urlRouterProvider.otherwise("/state1");
+  // For any unmatched url, redirect to /home
+  $urlRouterProvider.otherwise("/home");
   //
   // Now set up the states
   $stateProvider
-    .state('state1', {
-      url: "/state1",
-      templateUrl: "partials/state1.html"
+    .state('home', {
+      url: "/home",
+      templateUrl: "home/home.html"
     })
-    .state('state1.list', {
+    .state('home.list', {
       url: "/list",
-      templateUrl: "partials/state1.list.html",
+      templateUrl: "home/home.list.html",
       controller: function($scope) {
         $scope.items = ["A", "List", "Of", "Items"];
       }
