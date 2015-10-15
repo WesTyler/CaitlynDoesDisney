@@ -6,14 +6,25 @@
     <script src="./scripts/_bower.js"></script>
   </head>
 
-  <!-- angular views -->
   <body  ng-app="myApp">
-    <!-- Nav Bar: -->
-    <a ui-sref="home">Home</a>
-    <a ui-sref="about">About</a>
-    <a ui-sref="contact">Contact</a>
 
-    <div ui-view></div>
+    <!-- Heading -->
+    <div class="heading">Caitlyn Does Disney</div>
+
+    <!-- Nav Bar -->
+    <nav class="nav-bar">
+      <a ui-sref="home">Home</a>
+      <a ui-sref="about">About</a>
+      <a ui-sref="contact">Contact</a>
+    </nav>
+
+    <!-- Sidebar -->
+    <div class="sidebar clearfix">
+      <div>Sidebar menu</div>
+    </div>
+
+    <!-- State Contents -->
+    <div ui-view class="content-container"></div>
 
     <!-- loading angular files -->
     <script src="app.js"></script>

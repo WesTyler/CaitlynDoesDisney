@@ -1,1 +1,45 @@
-main.css
+.heading {
+  border: solid black 1px;
+  border-radius: 5px;
+
+  width: 1400px;
+  height: 100px;
+  margin: auto;
+  
+  padding: 10px;
+  
+}
+
+.nav-bar {
+  border: solid black 1px;
+  border-radius: 5px;
+
+  width: 1400px;
+  margin: auto;
+  
+  padding: 10px;
+
+  text-align: center;
+}
+
+.sidebar {
+  border: solid black 1px;
+  border-radius: 5px;
+
+  width: 150px;
+  height: 750px;
+  float: left;
+  padding: 10px;
+  margin-right: 10px;
+}
+
+.content-container {
+  border: solid black 1px;
+  border-radius: 5px;
+
+  width: 1000px;
+  margin: auto;
+  margin-top: 10px;
+
+  padding: 10px;
+}
