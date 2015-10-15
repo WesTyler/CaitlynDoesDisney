@@ -31,15 +31,17 @@
   float: left;
   padding: 10px;
   margin-right: 10px;
+
+  text-align: center;
 }
 
 .content-container {
   border: solid black 1px;
   border-radius: 5px;
 
-  width: 1000px;
-  margin: auto;
+  width: 1218px;
   margin-top: 10px;
+  float: right;
 
   padding: 10px;
 }
