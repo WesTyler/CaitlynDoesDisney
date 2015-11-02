@@ -21,4 +21,9 @@ myApp.config(function($stateProvider, $urlRouterProvider) {
       templateUrl: 'contact/contact.html',
       controller: 'ContactController'
     })
+    .state('workflow', {
+      url: '/workflow',
+      templateUrl: 'workflow/workflow.html',
+      controller: 'WorflowController'
+    })
 })
