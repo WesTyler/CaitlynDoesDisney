@@ -49,6 +49,7 @@
 h4 {
   display: inline-block;
   height: 250px;
+  width: 125px;
   padding: 10px;
   border: 1px solid black;
   border-radius: 5px;
