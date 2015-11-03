@@ -24,6 +24,6 @@ myApp.config(function($stateProvider, $urlRouterProvider) {
     .state('workflow', {
       url: '/workflow',
       templateUrl: 'workflow/workflow.html',
-      controller: 'WorflowController'
+      controller: 'WorkflowController'
     })
 })

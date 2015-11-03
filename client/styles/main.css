@@ -46,11 +46,13 @@
   padding: 10px;
 }
 
-h4 {
-  display: inline-block;
+.kanban-column {
+  float: left;
   height: 250px;
   width: 125px;
   padding: 10px;
+  margin-left: 5px;
   border: 1px solid black;
   border-radius: 5px;
+  text-align: center;
 }

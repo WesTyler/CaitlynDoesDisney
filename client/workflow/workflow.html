@@ -1,7 +1,9 @@
-<h4>Requested Quote</h4>
-<h4>Quote Sent</h4>
-<h4>Deposit Paid</h4>
-<h4>Trip Booked</h4>
-<h4>Dining Booked</h4>
-<h4>Trip Paid in Full</h4>
-<h4>On Vacation!</h4>
+<div class='kanban-board'>
+    <div data-ng-repeat="(column, value) in columns track by value.label" class="kanban-column clearfix">
+       <h4>{{value.label}}</h4>
+       <hr />
+       <div ng-repeat="card in value.cards" class="kanban-card">
+        {{card.name}}
+       </div>
+    </div>
+</div>
