@@ -5,11 +5,11 @@ var getColumns = module.exports.getColumns = function(req, res) {
 
 var getCards = module.exports.getCards = function(req, res) {
   console.log('Received GET at /cards');
-  res.sendStatus(200);
+  res.json([{name: 'Tyler Family', tripDate: '05/04/2016 - 05/11/2016', destination: 'Disney World', pixie: 'None', adults: 2, kids: 0, column: 'depositPaid'}, {name: 'Redfearn Family', tripDate: '05/04/2016 - 05/11/2016', destination: 'Disney World', pixie: 'None', adults: 2, kids: 0, column: 'quoteSent'}]);
 };
 
 var saveBoard = module.exports.saveBoard = function(req, res) {
-  console.log('Received POST at /board');
-  var data = req.body;
+  // var data = req.body;
+  // console.log('Received POST at /board', req);
   res.sendStatus(201);
 };
