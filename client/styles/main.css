@@ -56,3 +56,6 @@
   border-radius: 5px;
   text-align: center;
 }
+.kanban-nav-button {
+  cursor: pointer;
+}

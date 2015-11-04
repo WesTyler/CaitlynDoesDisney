@@ -7,7 +7,6 @@ angular.module('myApp')
   })
 
   $scope.getColumns = function() {
-    console.log('*** workflow.js: Getting Columns ***');
     $http({
       method: 'GET',
       url: '/columns'
@@ -18,7 +17,6 @@ angular.module('myApp')
   };
 
   $scope.getCards = function() {
-    console.log('*** workflow.js: Getting Cards ***');
     $http({
       method: 'GET',
       url: '/cards'
@@ -26,5 +24,17 @@ angular.module('myApp')
     .then(function(response) {
       $scope.cards = response;
     });
+  };
+
+  $scope.saveBoard = function() {
+    $http({
+      method: 'POST',
+      url: '/board'
+    })
+    .then($scope.confirmSave);
+  };
+
+  $scope.confirmSave = function() {
+    alert('Board Saved Successfully!');
   };
 }])

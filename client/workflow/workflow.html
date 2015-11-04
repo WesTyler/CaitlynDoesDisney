@@ -1,7 +1,8 @@
 <div class='kanban-board'>
   <div class="kanban-nav">
-    <a ng-click="getColumns()">Get Columns</a>
-    <a ng-click="getCards()">Refresh Cards</a>
+    <a ng-click="getColumns()" class="kanban-nav-button">Get Columns</a>
+    <a ng-click="getCards()" class="kanban-nav-button">Refresh Cards</a>
+    <a ng-click="saveBoard()" class="kanban-nav-button">Save Board</a>
   </div>
   <div data-ng-repeat="(column, value) in columns track by value.label" class="kanban-column clearfix">
    <h4>{{value.label}}</h4>
