@@ -1,12 +1,12 @@
 angular.module('myApp')
 .controller('WorkflowController', ['$scope', '$http', function($scope, $http){
-  $scope.columns = {'quoteRequested': {label: 'Quote Requested', cards: []}, 'quoteSent': {label: 'Quote Sent', cards: []}, 'depositPaid': {label: 'Deposit Paid', cards: []}};
+  $scope.columns = {};
   $scope.cards = [];
 
   $scope.getColumns = function() {
     $http.get('/columns')
     .then(function(response) {
-      $scope.columns = response;
+      $scope.columns = response.data;
     });
   };
 
@@ -34,4 +34,6 @@ angular.module('myApp')
   $scope.confirmSave = function() {
     alert('Board Saved Successfully!');
   };
+
+  $scope.getColumns();
 }])
