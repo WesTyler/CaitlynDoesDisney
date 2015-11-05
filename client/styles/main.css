@@ -71,3 +71,7 @@
   font-family: sans-serif;
   font-size: 1em;
 }
+
+ul[dnd-list], ul[dnd-list] > li { 
+    position: relative;
+}

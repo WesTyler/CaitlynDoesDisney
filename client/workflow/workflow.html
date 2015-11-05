@@ -4,11 +4,11 @@
     <a ng-click="getCards()" class="kanban-nav-button">Refresh Cards</a>
     <a ng-click="saveBoard()" class="kanban-nav-button">Save Board</a>
   </div>
-  <div data-ng-repeat="(column, value) in columns track by value.label" class="kanban-column clearfix">
+  <ul dnd-list="column" data-ng-repeat="(column, value) in columns track by value.label" class="kanban-column clearfix">
    <h4>{{value.label}}</h4>
    <hr />
-   <div ng-repeat="card in value.cards" class="kanban-card">
-    <a class="kanban-card-name"> {{card.name}} </a>
-   </div>
-  </div>
+   <li dnd-draggable="card" dnd-effect-allowed="move" ng-repeat="card in value.cards" class="kanban-card">{{card.name}}
+    <!-- <a class="kanban-card-name"> {{card.name}} </a> -->
+   </li>
+  </ul>
 </div>
