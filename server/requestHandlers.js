@@ -24,8 +24,8 @@ var getCards = module.exports.getCards = function(req, res) {
 };
 
 var saveBoard = module.exports.saveBoard = function(req, res) {
-  // var data = req.body;
-  // console.log('Received POST at /board', req);
+  var data = req.body;
+  console.log('Received POST at /board', data);
   // columns = data.columns;
   // cards = data.cards;
   res.sendStatus(201);
