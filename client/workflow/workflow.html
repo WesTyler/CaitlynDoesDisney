@@ -7,10 +7,10 @@
   <div data-ng-repeat="(column, value) in columns" class="kanban-column clearfix">
    <h4>{{value.label}}</h4>
    <hr />
-   <ul dnd-list="value.cards">
+   <ul dnd-list="value.cards" dnd-inserted="updatePosition(value)">
     {{value.cards.length + ' Cards'}}
      <li dnd-draggable="card"
-        dnd-moved="updatePosition()"
+        dnd-moved="moveCard(value, card, $index)"
         ng-repeat="card in value.cards"
         class="kanban-card">
         <a class="kanban-card-name"> {{card.name}} </a>

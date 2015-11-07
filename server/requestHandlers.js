@@ -29,7 +29,7 @@ var saveBoard = module.exports.saveBoard = function(req, res) {
   console.log('Received POST at /board', Object.keys(data.columns));
   Object.keys(data.columns).forEach(function(columnlabel) {
     data.columns[columnlabel].cards.forEach(function(card) {
-      console.log(columnlabel, card.column)
+      console.log('Column',columnlabel, 'Card Column', card.column)
       // newCardArrangement.push
     })
   })
