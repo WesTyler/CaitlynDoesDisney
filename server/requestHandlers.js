@@ -25,8 +25,13 @@ var getCards = module.exports.getCards = function(req, res) {
 
 var saveBoard = module.exports.saveBoard = function(req, res) {
   var data = req.body;
-  console.log('Received POST at /board', data);
-  // columns = data.columns;
-  // cards = data.cards;
+  var newCardArrangement = [];
+  console.log('Received POST at /board', Object.keys(data.columns));
+  Object.keys(data.columns).forEach(function(columnlabel) {
+    data.columns[columnlabel].cards.forEach(function(card) {
+      console.log(columnlabel, card.column)
+      // newCardArrangement.push
+    })
+  })
   res.sendStatus(201);
 };

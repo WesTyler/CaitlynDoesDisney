@@ -10,7 +10,7 @@
    <ul dnd-list="value.cards">
     {{value.cards.length + ' Cards'}}
      <li dnd-draggable="card"
-        dnd-moved="value.cards.splice($index, 1)"
+        dnd-moved="updatePosition()"
         ng-repeat="card in value.cards"
         class="kanban-card">
         <a class="kanban-card-name"> {{card.name}} </a>

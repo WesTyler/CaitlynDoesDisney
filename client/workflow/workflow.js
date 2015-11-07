@@ -3,6 +3,10 @@ angular.module('myApp')
   $scope.columns = {};
   $scope.cards = [];
 
+  $scope.updatePosition = function() {
+    console.log(this);
+  }
+
   $scope.getColumns = function() {
     $http.get('/columns')
     .then(function(response) {
