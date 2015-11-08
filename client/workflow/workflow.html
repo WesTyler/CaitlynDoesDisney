@@ -1,7 +1,12 @@
 <div class='kanban-board'>
   <div class="kanban-nav">
-    <!-- <a ng-click="getColumns()" class="kanban-nav-button">Get Cards</a> -->
-    <!-- <a ng-click="saveBoard()" class="kanban-nav-button">Save Board</a> -->
+    Filter By:
+    <select ng-model="filter">
+      <option value="" selected>None</option>
+      <option value="Caitlyn"> Caitlyn </option>
+      <option value="Emily"> Emily </option>
+      <option value="Beth"> Beth </option>
+    </select>
   </div>
   <div data-ng-repeat="(column, value) in columns" class="kanban-column clearfix">
    <h4>{{value.label}}  ({{value.cards.length}})</h4>
@@ -9,7 +14,7 @@
    <ul dnd-list="value.cards">
      <li dnd-draggable="card"
         dnd-moved="moveCard(value, card, $index)"
-        ng-repeat="card in value.cards"
+        ng-repeat="card in value.cards | filter:filter"
         class="kanban-card">
         <a class="kanban-card-name"> {{card.name}} </a>
      </li>
