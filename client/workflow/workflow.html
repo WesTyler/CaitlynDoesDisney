@@ -1,14 +1,12 @@
 <div class='kanban-board'>
   <div class="kanban-nav">
-    <a ng-click="getColumns()" class="kanban-nav-button">Get Columns</a>
-    <a ng-click="getCards()" class="kanban-nav-button">Refresh Cards</a>
+    <a ng-click="getColumns()" class="kanban-nav-button">Get Cards</a>
     <a ng-click="saveBoard()" class="kanban-nav-button">Save Board</a>
   </div>
   <div data-ng-repeat="(column, value) in columns" class="kanban-column clearfix">
-   <h4>{{value.label}}</h4>
+   <h4>{{value.label}}  ({{value.cards.length}})</h4>
    <hr />
    <ul dnd-list="value.cards" dnd-inserted="updatePosition(value)">
-    {{value.cards.length + ' Cards'}}
      <li dnd-draggable="card"
         dnd-moved="moveCard(value, card, $index)"
         ng-repeat="card in value.cards"
