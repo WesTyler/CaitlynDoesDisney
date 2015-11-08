@@ -5,11 +5,7 @@ angular.module('myApp')
 
   $scope.moveCard = function(column, card, index) {
     column.cards.splice(index, 1);
-    $scope.droppedColumn = '';
-  };
-
-  $scope.updatePosition = function(column){
-    $scope.droppedColumn = column.label;
+    $scope.saveBoard();
   };
 
   $scope.getColumns = function() {
@@ -19,27 +15,13 @@ angular.module('myApp')
     });
   };
 
-  $scope.getCards = function() {
-    Object.keys($scope.columns).forEach(function(column) {
-      $scope.columns[column].cards = [];
-    });
-    $http.get('/cards')
-    .then(function(response) {
-      response.data.forEach(function(card) {
-        $scope.columns[card.column].cards.push(card);
-      });
-    });
-  };
-
   $scope.saveBoard = function() {
     $http.post('board', {
       columns: $scope.columns,
     })
-    .then($scope.confirmSave);
-  };
-
-  $scope.confirmSave = function() {
-    alert('Board Saved Successfully!');
+    .catch(function() {
+      alert('Something went wrong...')
+    });
   };
 
   $scope.getColumns();
