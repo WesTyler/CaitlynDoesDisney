@@ -16,7 +16,7 @@
         dnd-moved="moveCard(value, card, $index)"
         ng-repeat="card in value.cards | filter:filter"
         class="kanban-card">
-        <a class="kanban-card-name"> {{card.name}} </a>
+        <a class="kanban-card-name" ng-click="viewDetails()"> {{card.name}} </a>
      </li>
    </ul>
   </div>

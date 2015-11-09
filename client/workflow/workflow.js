@@ -25,5 +25,9 @@ angular.module('myApp')
     });
   };
 
+  $scope.viewDetails = function() {
+    
+  };
+
   $scope.getColumns();
-}])
+}]);
