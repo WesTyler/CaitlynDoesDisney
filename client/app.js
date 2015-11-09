@@ -29,7 +29,8 @@ myApp.config(function($stateProvider, $urlRouterProvider) {
     .state('workflow.modal', {
       views:{
         "modal": {
-          templateUrl: "modal/modal.html"
+          templateUrl: "modal/modal.html",
+          controller: 'ModalController'
         }
       },
       onEnter: ["$state", function($state) {
@@ -51,7 +52,8 @@ myApp.config(function($stateProvider, $urlRouterProvider) {
     .state('workflow.modal.viewDetails', {
       views: {
         'modal': {
-          templateUrl: 'modal/viewDetails.html'
+          templateUrl: 'modal/viewDetails.html',
+          controller: 'ViewDetailsController'
         }
       }
     })
