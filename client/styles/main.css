@@ -45,3 +45,42 @@
 
   padding: 10px;
 }
+
+.kanban-column {
+  float: left;
+  height: 250px;
+  width: 125px;
+  padding: 10px;
+  margin-left: 5px;
+  border: 1px solid black;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.kanban-column, h4 {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.kanban-nav-button {
+  cursor: pointer;
+}
+
+.kanban-card-name {
+  cursor: pointer;
+  font-family: sans-serif;
+  font-size: 1em;
+}
+
+.selected {
+  background-color: blue;
+}
+
+ul[dnd-list], ul[dnd-list] > li {
+    list-style: none;
+    position: relative;
+    min-width: 75px;
+    min-height: 10px;
+    border: 1px solid black;
+    padding: 5px;
+}

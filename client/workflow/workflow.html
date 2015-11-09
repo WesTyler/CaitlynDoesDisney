@@ -1,0 +1,23 @@
+<div class='kanban-board'>
+  <div class="kanban-nav">
+    Filter By:
+    <select ng-model="filter">
+      <option value="" selected>None</option>
+      <option value="Caitlyn"> Caitlyn </option>
+      <option value="Emily"> Emily </option>
+      <option value="Beth"> Beth </option>
+    </select>
+  </div>
+  <div data-ng-repeat="(column, value) in columns" class="kanban-column clearfix">
+   <h4>{{value.label}}  ({{value.cards.length}})</h4>
+   <hr />
+   <ul dnd-list="value.cards">
+     <li dnd-draggable="card"
+        dnd-moved="moveCard(value, card, $index)"
+        ng-repeat="card in value.cards | filter:filter"
+        class="kanban-card">
+        <a class="kanban-card-name" ng-click="viewDetails()"> {{card.name}} </a>
+     </li>
+   </ul>
+  </div>
+</div>

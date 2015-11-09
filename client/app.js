@@ -1,4 +1,4 @@
-var myApp = angular.module('myApp', ['ui.router'])
+var myApp = angular.module('myApp', ['ui.router', 'dndLists'])
 myApp.config(function($stateProvider, $urlRouterProvider) {
   //
   // For any unmatched url, redirect to /
@@ -20,5 +20,18 @@ myApp.config(function($stateProvider, $urlRouterProvider) {
       url: '/contact',
       templateUrl: 'contact/contact.html',
       controller: 'ContactController'
+    })
+    .state('workflow', {
+      url: '/workflow',
+      templateUrl: 'workflow/workflow.html',
+      controller: 'WorkflowController'
+    })
+    .state('modal', {
+      views:{
+        "modal": {
+          templateUrl: "modal/modal.html"
+        }
+      },
+      abstract: true
     })
 })
