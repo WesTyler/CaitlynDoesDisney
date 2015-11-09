@@ -26,4 +26,12 @@ myApp.config(function($stateProvider, $urlRouterProvider) {
       templateUrl: 'workflow/workflow.html',
       controller: 'WorkflowController'
     })
+    .state('modal', {
+      views:{
+        "modal": {
+          templateUrl: "modal/modal.html"
+        }
+      },
+      abstract: true
+    })
 })
