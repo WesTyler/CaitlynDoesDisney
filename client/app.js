@@ -26,12 +26,33 @@ myApp.config(function($stateProvider, $urlRouterProvider) {
       templateUrl: 'workflow/workflow.html',
       controller: 'WorkflowController'
     })
-    .state('modal', {
+    .state('workflow.modal', {
       views:{
         "modal": {
           templateUrl: "modal/modal.html"
         }
       },
+      onEnter: ["$state", function($state) {
+        var target2 = document.getElementsByClassName(".Modal-box, .Modal-box *");
+
+        document.onkeyup = function(e) {
+          if(e.keyCode == 27) {
+            document.offkeyup;
+            $state.go("workflow");
+          }
+        };
+
+        target2.onclick = function(e) {
+          e.stopPropagation();
+        };
+      }],
       abstract: true
+    })
+    .state('workflow.modal.viewDetails', {
+      views: {
+        'modal': {
+          templateUrl: 'modal/viewDetails.html'
+        }
+      }
     })
 })
