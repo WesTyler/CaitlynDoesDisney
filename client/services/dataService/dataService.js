@@ -1,6 +1,6 @@
 angular.module('myApp')
 
-.service('DataService', ['$http', function($http){
+.service('DataService', [function(){
   var context = this;
   context.data = {};
 

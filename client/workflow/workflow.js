@@ -1,5 +1,5 @@
 angular.module('myApp')
-.controller('WorkflowController', ['DataService', '$scope', '$http', '$state', '$stateParams', function(DataService, $scope, $http, $state, $stateParams){
+.controller('WorkflowController', ['DataService', '$scope', '$http', '$state', function(DataService, $scope, $http, $state){
   $scope.columns = {};
   $scope.droppedColumn = '';
   $scope.filter = '';
@@ -29,8 +29,8 @@ angular.module('myApp')
     DataService.setData(card);
     $state.go("workflow.modal.viewDetails")
   };
-  if ($stateParams) {
-    console.log('State Params', $stateParams)
-  }
+
+  $scope.$on('CardUpdated', $scope.saveBoard);
+
   $scope.getColumns();
 }]);

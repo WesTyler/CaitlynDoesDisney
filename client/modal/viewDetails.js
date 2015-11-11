@@ -1,9 +1,10 @@
 angular.module('myApp')
-.controller('ViewDetailsController', ['DataService', '$scope', '$http', '$state', function(DataService, $scope, $http, $state){
+.controller('ViewDetailsController', ['DataService', '$scope', '$rootScope', '$state', function(DataService, $scope, $rootScope, $state){
   $scope.card = DataService.getData();
 
   $scope.saveAndExit = function() {
     DataService.setData($scope.card);
-    $state.go('workflow', DataService.getData());
+    $rootScope.$broadcast('CardUpdated');
+    $state.go('workflow');
   }  
 }]);
