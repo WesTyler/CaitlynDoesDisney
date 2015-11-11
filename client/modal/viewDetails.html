@@ -1,4 +1,14 @@
 <div class="Modal-box">
-  <h5>Modal contents</h5>
-  <button ui-sref="workflow">Click to exit modal</button>
+  <h5>{{card.name}}</h5>
+  Trip Date: {{card.tripDate}}
+  <br>Primary Destination: {{card.destination}}
+  <br>Pixie Package Purchased: {{card.pixie}}
+  <br>Total Number of People: {{card.adults + card.kids}}
+  <br>Adults: {{card.adults}}
+  <br>Children: {{card.kids}}
+  <br>Travel Agent: {{card.agent}}
+  <br>Notes:<br>
+  <textarea ng-model="card.notes">{{card.notes}}</textarea>
+  <br>
+  <button ng-click="saveAndExit()">Click to save details</button>
 </div>
