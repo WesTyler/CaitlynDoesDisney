@@ -18,7 +18,6 @@ angular.module('myApp')
   };
 
   $scope.saveField = function(fieldName) {
-    console.log('*** \n', fieldName, subfield)
     delete $scope.edit[fieldName];
   };
 }]);

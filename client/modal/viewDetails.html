@@ -1,7 +1,9 @@
 <div class="Modal-box">
   <h3>
     <span class="view-details-value" ng-hide="edit.name">{{card.name}}</span>
-    <input ng-model="card.name" ng-if="edit.name" ng-submit="saveField('name')"/>
+    <form ng-submit="saveField('name')" ng-if="edit.name">
+      <input ng-model="card.name"/>
+    </form>
     <button class="view-details-edit" ng-click="editField('name')"></button>
   </h3>
   
@@ -10,7 +12,9 @@
       <span class="view-details-value" ng-hide="edit.tripDate">{{card.tripDate}}</span>
     </span>
     <button class="view-details-edit" ng-click="editField('tripDate')"></button>
-    <input ng-model="card.tripDate" ng-if="edit.tripDate" ng-submit="saveField('tripDate')"/>
+    <form ng-submit="saveField('tripDate')" ng-if="edit.tripDate">
+      <input ng-model="card.tripDate"/>
+    </form>
   </div>
 
   <div class="view-details-holder">
@@ -18,7 +22,9 @@
       <span class="view-details-value" ng-hide="edit.destination">{{card.destination}}</span>
     </span>
     <button class="view-details-edit" ng-click="editField('destination')"></button>
-    <input ng-model="card.destination" ng-if="edit.destination" ng-submit="saveField('destination')"/>
+    <form ng-submit="saveField('destination')" ng-if="edit.destination">
+      <input ng-model="card.destination"/>
+    </form>
   </div>
 
   <div class="view-details-holder">
@@ -26,21 +32,25 @@
       <span class="view-details-value" ng-hide="edit.pixie">{{card.pixie}}</span>
     </span>
     <button class="view-details-edit" ng-click="editField('pixie')"></button>
-    <input ng-model="card.pixie" ng-if="edit.pixie" ng-submit="saveField('pixie')"/>
+    <form ng-submit="saveField('pixie')" ng-if="edit.pixie">
+      <input ng-model="card.pixie"/>
+    </form>
   </div>
-
+<!-- 
   <div class="view-details-holder">
     <span class="view-details-detail">Total Number of People: 
-      <span class="view-details-value" ng-hide="edit.people">{{card.adults + card.kids}}</span>
+      <span class="view-details-value" ng-hide="edit.people">{{Number(card.adults) + Number(card.kids)}}</span>
     </span>
   </div>
-
+ -->
   <div class="view-details-holder">
     <span class="view-details-detail">Adults: 
       <span class="view-details-value" ng-hide="edit.people.adults">{{card.adults}}</span>
     </span>
     <button class="view-details-edit" ng-click="editField('people', 'adults')"></button>
-    <input ng-model="card.adults" ng-if="edit.people.adults" ng-submit="saveField('people', 'adults')"/>
+    <form ng-submit="saveField('people')" ng-if="edit.people.adults">
+      <input ng-model="card.adults"/>
+    </form>
   </div>
 
   <div class="view-details-holder">
@@ -48,7 +58,9 @@
       <span class="view-details-value" ng-hide="edit.people.kids">{{card.kids}}</span>
     </span>
     <button class="view-details-edit" ng-click="editField('people', 'kids')"></button>
-    <input ng-model="card.kids" ng-if="edit.people.kids" ng-submit="saveField('people', 'kids')"/>
+    <form ng-submit="saveField('people')" ng-if="edit.people.kids">
+      <input ng-model="card.kids"/>
+    </form>
   </div>
 
   <div class="view-details-holder">
@@ -56,14 +68,18 @@
       <span class="view-details-value" ng-hide="edit.agent">{{card.agent}}</span>
     </span>
     <button class="view-details-edit" ng-click="editField('agent')"></button>
-    <input ng-model="card.agent" ng-if="edit.agent" ng-submit="saveField('agent')"/>
+    <form ng-submit="saveField('agent')" ng-if="edit.agent">
+      <input ng-model="card.agent"/>
+    </form>
   </div>
 
   <div class="view-details-holder">
     <span class="view-details-detail">Notes:
       <span class="view-details-value" ng-hide="edit.notes">{{card.notes}}</span>
       <button class="view-details-edit" ng-click="editField('notes')"></button>
-      <input ng-model="card.notes" ng-if="edit.notes" ng-submit="saveField('notes')"/>
+      <form  ng-if="edit.notes" ng-submit="saveField('notes')">
+        <input ng-model="card.notes"/>
+      </form>
     </span>
   </div>
 
