@@ -1,14 +1,71 @@
 <div class="Modal-box">
-  <h5>{{card.name}}</h5>
-  Trip Date: {{card.tripDate}}
-  <br>Primary Destination: {{card.destination}}
-  <br>Pixie Package Purchased: {{card.pixie}}
-  <br>Total Number of People: {{card.adults + card.kids}}
-  <br>Adults: {{card.adults}}
-  <br>Children: {{card.kids}}
-  <br>Travel Agent: {{card.agent}}
-  <br>Notes:<br>
-  <textarea ng-model="card.notes">{{card.notes}}</textarea>
-  <br>
+  <h3>
+    <span class="view-details-value" ng-hide="edit.name">{{card.name}}</span>
+    <input ng-model="card.name" ng-if="edit.name" ng-submit="saveField('name')"/>
+    <button class="view-details-edit" ng-click="editField('name')"></button>
+  </h3>
+  
+  <div>
+    <span class="view-details-detail">Trip Date: 
+      <span class="view-details-value" ng-hide="edit.tripDate">{{card.tripDate}}</span>
+    </span>
+    <button class="view-details-edit" ng-click="editField('tripDate')"></button>
+    <input ng-model="card.tripDate" ng-if="edit.tripDate" ng-submit="saveField('tripDate')"/>
+  </div>
+
+  <div class="view-details-holder">
+    <span class="view-details-detail">Primary Destination: 
+      <span class="view-details-value" ng-hide="edit.destination">{{card.destination}}</span>
+    </span>
+    <button class="view-details-edit" ng-click="editField('destination')"></button>
+    <input ng-model="card.destination" ng-if="edit.destination" ng-submit="saveField('destination')"/>
+  </div>
+
+  <div class="view-details-holder">
+    <span class="view-details-detail">Pixie Package Purchased: 
+      <span class="view-details-value" ng-hide="edit.pixie">{{card.pixie}}</span>
+    </span>
+    <button class="view-details-edit" ng-click="editField('pixie')"></button>
+    <input ng-model="card.pixie" ng-if="edit.pixie" ng-submit="saveField('pixie')"/>
+  </div>
+
+  <div class="view-details-holder">
+    <span class="view-details-detail">Total Number of People: 
+      <span class="view-details-value" ng-hide="edit.people">{{card.adults + card.kids}}</span>
+    </span>
+  </div>
+
+  <div class="view-details-holder">
+    <span class="view-details-detail">Adults: 
+      <span class="view-details-value" ng-hide="edit.people.adults">{{card.adults}}</span>
+    </span>
+    <button class="view-details-edit" ng-click="editField('people', 'adults')"></button>
+    <input ng-model="card.adults" ng-if="edit.people.adults" ng-submit="saveField('people', 'adults')"/>
+  </div>
+
+  <div class="view-details-holder">
+    <span class="view-details-detail">Children: 
+      <span class="view-details-value" ng-hide="edit.people.kids">{{card.kids}}</span>
+    </span>
+    <button class="view-details-edit" ng-click="editField('people', 'kids')"></button>
+    <input ng-model="card.kids" ng-if="edit.people.kids" ng-submit="saveField('people', 'kids')"/>
+  </div>
+
+  <div class="view-details-holder">
+    <span class="view-details-detail">Travel Agent: 
+      <span class="view-details-value" ng-hide="edit.agent">{{card.agent}}</span>
+    </span>
+    <button class="view-details-edit" ng-click="editField('agent')"></button>
+    <input ng-model="card.agent" ng-if="edit.agent" ng-submit="saveField('agent')"/>
+  </div>
+
+  <div class="view-details-holder">
+    <span class="view-details-detail">Notes:
+      <span class="view-details-value" ng-hide="edit.notes">{{card.notes}}</span>
+      <button class="view-details-edit" ng-click="editField('notes')"></button>
+      <input ng-model="card.notes" ng-if="edit.notes" ng-submit="saveField('notes')"/>
+    </span>
+  </div>
+
   <button ng-click="saveAndExit()">Click to save details</button>
 </div>
