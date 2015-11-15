@@ -7,6 +7,7 @@
       <option value="Emily"> Emily </option>
       <option value="Beth"> Beth </option>
     </select>
+    <button class="new-kanban-card" ng-click="addNewCard()">+</button>
   </div>
   <div data-ng-repeat="(column, value) in columns" class="kanban-column clearfix">
    <h4>{{value.label}}  ({{value.cards.length}})</h4>

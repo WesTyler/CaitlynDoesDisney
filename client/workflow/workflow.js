@@ -30,6 +30,14 @@ angular.module('myApp')
     $state.go("workflow.modal.viewDetails")
   };
 
+  $scope.addNewCard = function() {
+    console.log('add new card')
+    var firstColumn = Object.keys($scope.columns)[0];
+    $scope.columns[firstColumn].cards.push({
+      name: 'New Family'
+    })
+  }
+
   $scope.$on('CardUpdated', $scope.saveBoard);
 
   $scope.getColumns();

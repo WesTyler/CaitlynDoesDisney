@@ -14,3 +14,4 @@ userstories.txt
 # Dependency directory
 node_modules
 bower_components
+client/scripts/_bower.js
