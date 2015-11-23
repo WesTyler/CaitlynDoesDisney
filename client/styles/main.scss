@@ -1,38 +1,48 @@
 .heading {
   border: solid black 1px;
   border-radius: 5px;
+
   width: 100%;
   height: 100px;
   margin: auto;
+  
   padding: 10px;
+  
 }
 
 .nav-bar {
   border: solid black 1px;
   border-radius: 5px;
+
   width: 100%;
   margin: auto;
+  
   padding: 10px;
+
   text-align: center;
 }
 
 .sidebar {
   border: solid black 1px;
   border-radius: 5px;
+
   width: 10%;
   height: 750px;
   float: left;
   padding: 10px;
   margin-right: 10px;
+
   text-align: center;
 }
 
 .content-container {
   border: solid black 1px;
   border-radius: 5px;
+
   width: 80%;
   margin-top: 10px;
   float: right;
+
   padding: 10px;
 }
 
@@ -40,8 +50,8 @@
   position: fixed;
   top: 0px;
   left: 0px;
-  height: 100%;
-  width: 100%;
+  height:100%;
+  width:100%;
   background: #000;
   z-index: 1;
   opacity: 0.5;
@@ -51,8 +61,8 @@
   position: fixed;
   top: 0px;
   left: 0px;
-  height: 100%;
-  width: 100%;
+  height:100%;
+  width:100%;
   background: transparent;
   z-index: 2;
   padding: 30px 15px;
@@ -64,7 +74,7 @@
   background: #fff;
   padding: 15px;
   border-radius: 4px;
-  box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.3);
+  box-shadow: 1px 2px 5px rgba(0,0,0,0.3);
   position: relative;
 }
 
@@ -74,6 +84,8 @@
     padding: 30px;
   }
 }
+
+
 .kanban-column {
   float: left;
   height: 250px;
@@ -101,16 +113,14 @@
 }
 
 ul[dnd-list], ul[dnd-list] > li {
-  list-style: none;
-  position: relative;
-  min-width: 75px;
-  min-height: 10px;
-  border: 1px solid black;
-  padding: 5px;
+    list-style: none;
+    position: relative;
+    min-width: 75px;
+    min-height: 10px;
+    border: 1px solid black;
+    padding: 5px;
 }
 
 ul[dnd-list] > li > a {
-  text-decoration: none;
+    text-decoration: none;
 }
-
-/*# sourceMappingURL=main.css.map */

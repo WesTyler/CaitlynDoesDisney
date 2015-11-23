@@ -18,3 +18,7 @@ client/scripts/_bower.js
 
 # Credentials
 server/config.js
+
+# Misc
+client/styles/main.css.map
+.sass-cache/*
