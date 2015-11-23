@@ -4,7 +4,11 @@ module.exports = function(grunt) {
   grunt.initConfig({
     bower_concat: {
       all: {
-        dest: 'client/scripts/_bower.js'
+        dest: 'client/scripts/_bower.js',
+        exclude: [
+          'jquery',
+          'bootstrap-sass'
+        ]
       }
     }
   });

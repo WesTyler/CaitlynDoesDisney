@@ -15,3 +15,6 @@ userstories.txt
 node_modules
 bower_components
 client/scripts/_bower.js
+
+# Credentials
+server/config.js

@@ -1,7 +1,7 @@
 angular.module('myApp')
 .controller('ViewDetailsController', ['DataService', '$scope', '$rootScope', '$state', function(DataService, $scope, $rootScope, $state){
   $scope.card = DataService.getData();
-  $scope.edit = {};
+  $scope.edit = false;
 
   $scope.saveAndExit = function() {
     DataService.setData($scope.card);
@@ -9,15 +9,11 @@ angular.module('myApp')
     $state.go('workflow');
   };
 
-  $scope.editField = function(fieldName, subField) {
-    $scope.edit[fieldName] = true;
-    if (subField) {
-      $scope.edit[fieldName] = {};
-      $scope.edit[fieldName][subField] = true;
-    }
+  $scope.editField = function() {
+    $scope.edit = true;
   };
 
-  $scope.saveField = function(fieldName) {
-    delete $scope.edit[fieldName];
+  $scope.saveField = function() {
+    $scope.edit = false;
   };
 }]);
