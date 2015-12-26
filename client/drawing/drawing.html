@@ -1,15 +1,20 @@
 <div class="drawing-page">
   <form>
-    <input ng-model="person.name" />
-    <input ng-model="person.number" type="integer"/>
+    <input ng-model="personToAdd.name" />
     <button ng-click="addPerson()">Submit</button>
   </form>
 
-  <button ng-click="drawWinner()">Draw a winner</button>
-
   <ul>
-    <li ng-repeat="person in people">{{person}}</li>
+    <li ng-repeat="person in people">
+      <div>{{person.name}}</div>
+      <div>{{person.entries}}</div>
+      <button ng-click="addEntry()">+</button>
+    </li>
   </ul>
 
-  <div class="drawing-results" ng-if="winner.name">And the winner is: {{winner.name}}!</div>
+  <button ng-click="drawWinner()">Draw a winner</button>
+
+  <div class="drawing-results" ng-if="winner.name">
+    And the winner is: {{winner.name}}!
+  </div>
 </div>

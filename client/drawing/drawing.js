@@ -1,33 +1,41 @@
 angular.module('myApp')
 .controller('DrawingController', ['$scope', '$http', '$state', function($scope, $http, $state){
-  $scope.person = {
-    name: '',
-    number: 0
+  $scope.personToAdd = {
+    name: ''
   };
   $scope.people = [];
+  $scope.entries = [];
   $scope.winner = {};
   $scope.results = {};
 
   $scope.addPerson = function() {
-    var name = $scope.person.name;
-    var numberOfEntries = $scope.person.number || 1;
+    $scope.people.push({
+      name: $scope.personToAdd.name,
+      entries: 1
+    });
+    $scope.personToAdd.name = '';
+  };
 
-    for (var i=0; i<numberOfEntries; i++) {
-      var entryName = i === 0 ? name : name + i;
-      $scope.people.push(entryName);
-    }
+  $scope.addEntry = function() {
+    this.person.entries++;
 
-    console.log('added person', entryName);
   };
 
   $scope.drawWinner = function() {
-    console.log($scope.people);
     $scope.results = {};
     $scope.winner = {};
 
-    for (var i=0; i<1000000; i++) {
-      var index = Math.floor(Math.random()*$scope.people.length);
-      $scope.results[$scope.people[index]] = $scope.results[$scope.people[index]] + 1 || 1;
+    $scope.people.forEach(function(person) {
+      for (var i=0; i<person.entries; i++) {
+        var entryName = i === 0 ? person.name : person.name + i;
+
+        $scope.entries.push(entryName);
+      }
+    });
+
+    for (var i=0; i<500000; i++) {
+      var index = Math.floor(Math.random()*$scope.entries.length);
+      $scope.results[$scope.entries[index]] = $scope.results[$scope.entries[index]] + 1 || 1;
     };
 
     var max = 0;
