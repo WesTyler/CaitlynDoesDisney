@@ -21,6 +21,11 @@ myApp.config(function($stateProvider, $urlRouterProvider) {
       templateUrl: 'contact/contact.html',
       controller: 'ContactController'
     })
+    .state('drawing', {
+      url: '/drawing',
+      templateUrl: 'drawing/drawing.html',
+      controller: 'DrawingController'
+    })
     .state('workflow', {
       url: '/workflow',
       templateUrl: 'workflow/workflow.html',
