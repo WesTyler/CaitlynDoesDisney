@@ -113,4 +113,8 @@ ul[dnd-list] > li > a {
   text-decoration: none;
 }
 
+.drawing {
+  display: inline-block;
+}
+
 /*# sourceMappingURL=main.css.map */

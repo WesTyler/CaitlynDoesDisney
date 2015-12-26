@@ -6,9 +6,9 @@
 
   <ul>
     <li ng-repeat="person in people">
-      <div>{{person.name}}</div>
-      <div>{{person.entries}}</div>
-      <button ng-click="addEntry()">+</button>
+      <div class="drawing">{{person.name}} - </div>
+      <div  class="drawing">{{person.entries}} entries</div>
+      <button  class="drawing" ng-click="addEntry()">+</button>
     </li>
   </ul>
 
