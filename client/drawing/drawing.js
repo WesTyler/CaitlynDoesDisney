@@ -23,6 +23,7 @@ angular.module('myApp')
   $scope.drawWinner = function() {
     console.log($scope.people);
     $scope.results = {};
+    $scope.winner = {};
 
     for (var i=0; i<1000000; i++) {
       var index = Math.floor(Math.random()*$scope.people.length);
@@ -39,9 +40,8 @@ angular.module('myApp')
         max = $scope.results[person];
         $scope.winner = {};
         $scope.winner[person] = max;
+        $scope.winner.name = person;
       }
     }
-
-    console.log($scope.winner);
   };
 }]);

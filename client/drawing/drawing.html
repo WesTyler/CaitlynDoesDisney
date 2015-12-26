@@ -1,4 +1,4 @@
-<div class="drawing page">
+<div class="drawing-page">
   <form>
     <input ng-model="person.name" />
     <input ng-model="person.number" type="integer"/>
@@ -6,4 +6,10 @@
   </form>
 
   <button ng-click="drawWinner()">Draw a winner</button>
+
+  <ul>
+    <li ng-repeat="person in people">{{person}}</li>
+  </ul>
+
+  <div class="drawing-results" ng-if="winner.name">And the winner is: {{winner.name}}!</div>
 </div>
